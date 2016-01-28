@@ -1,3 +1,8 @@
+Tertium
+Marxeez
+
+conventions: allman style
+
 #######################
 Starter Webapp - Quotes
 #######################
