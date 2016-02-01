@@ -1,13 +1,6 @@
 <?php
 
-/**
- * 
- * 
- * 
- * controllers/Wise.php
- *
- * ------------------------------------------------------------------------
- */
+
 class Wise extends Application {
 
     function __construct() {
@@ -15,8 +8,9 @@ class Wise extends Application {
     }
 
     function bingo() {
-        $this->data['pagebody'] = 'justone'; // show this view
-        // grab the sixth item to pass to view
+        // show view template
+        $this->data['pagebody'] = 'justone'; 
+        // get 6th item and pass onto view
         $record = $this->quotes->get(6);
 
         $this->data = array_merge($this->data, $record);

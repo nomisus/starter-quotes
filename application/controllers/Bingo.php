@@ -1,13 +1,6 @@
 <?php
 
-/**
- * 
- * 
- * 
- * controllers/Bingo.php
- *
- * ------------------------------------------------------------------------
- */
+
 class Bingo extends Application {
 
     function __construct() {
@@ -15,8 +8,9 @@ class Bingo extends Application {
     }
 
     function index() {
-        $this->data['pagebody'] = 'justone'; // show this view
-        // grab the fifth item to pass to view
+        // show view template
+        $this->data['pagebody'] = 'justone';
+        // get 5th view and pass to template
         $record = $this->quotes->get(5);
 
         $this->data = array_merge($this->data, $record);

@@ -1,13 +1,6 @@
 <?php
 
-/**
- * 
- * 
- * 
- * controllers/last/Welcome.php
- *
- * ------------------------------------------------------------------------
- */
+
 class Welcome extends Application {
 
     function __construct() {
@@ -15,8 +8,9 @@ class Welcome extends Application {
     }
 
     function index() {
-        $this->data['pagebody'] = 'justone'; // show this view
-        // grab the last item to pass to view
+        // show view template
+        $this->data['pagebody'] = 'justone'; 
+        // get the last item and pass to template
         $record = $this->quotes->last();
 
         $this->data = array_merge($this->data, $record);

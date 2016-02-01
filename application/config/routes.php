@@ -44,19 +44,19 @@ if (!defined('BASEPATH'))
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
 
-//sleep - wildcard routing
+//sleep link - wildcard routing
 $route['sleep'] = "first/zzz";
 $route['lock/(:any)/(:any)'] = "welcome/shucks";
 
-//show - wildcard routing
+//show link - wildcard routing
 $route['show/(:num)'] = "first/gimme/$1";
 
-//bingo - remapped
+//bingo link - remapped
 $route['([a-z]+)/bingo'] = "bingo";
 
-//callback routing
+//dunno (random) link - callback routing
 $route['dunno'] = function() {
-    $source = './data/cat.jpg'; // an image you provide
+    $source = './data/catmeme.jpg'; // an image you provide
     // set the mime type for that image
     header("Content-type: image/jpeg");
     header('Content-Disposition: inline');
