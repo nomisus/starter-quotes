@@ -1,13 +1,6 @@
 <?php
 
-/**
- * 
- *
- * 
- * controllers/First.php
- *
- * ------------------------------------------------------------------------
- */
+
 class First extends Application {
 
     function __construct() {
@@ -15,8 +8,9 @@ class First extends Application {
     }
 
     function index() {
-        $this->data['pagebody'] = 'justone'; // show this view
-        // grab the first item to pass to view
+        // show view template
+        $this->data['pagebody'] = 'justone';
+        // get first item and pass to template
         $record = $this->quotes->first();
 
         $this->data = array_merge($this->data, $record);
@@ -25,8 +19,9 @@ class First extends Application {
     }
 
     function zzz() {
-        $this->data['pagebody'] = 'justone'; // this is the view we want shown
-        // grab the first item in the list, to pass on to our view
+        // show view template
+        $this->data['pagebody'] = 'justone'; 
+        // get first item and pass onto view
         $record = $this->quotes->get(1);
 
         $this->data = array_merge($this->data, $record);
@@ -35,8 +30,9 @@ class First extends Application {
     }
 
     function gimme($id) {
-        $this->data['pagebody'] = 'justone'; // this is the view we want shown
-        // grab the id=3 in the list, to pass on to our view
+        // show view template
+        $this->data['pagebody'] = 'justone'; 
+        // get id=3 and pass onto view
         $record = $this->quotes->get($id);
 
         $this->data = array_merge($this->data, $record);
